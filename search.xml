@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>java</title>
+      <link href="/2019/09/14/java/"/>
+      <url>/2019/09/14/java/</url>
+      
+        <content type="html"><![CDATA[<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h2 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h2>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ajax</title>
+      <link href="/2019/09/14/Ajax/"/>
+      <url>/2019/09/14/Ajax/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>javascript</title>
+      <link href="/2019/09/14/javascript/"/>
+      <url>/2019/09/14/javascript/</url>
+      
+        <content type="html"><![CDATA[<h3 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3><h3 id="事件函数"><a href="#事件函数" class="headerlink" title="事件函数"></a>事件函数</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 原生js </tag>
+            
+            <tag> 事件函数 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正则</title>
+      <link href="/2019/09/14/%E6%AD%A3%E5%88%99/"/>
+      <url>/2019/09/14/%E6%AD%A3%E5%88%99/</url>
+      
+        <content type="html"><![CDATA[<h3 id="hexo文章顶部配置"><a href="#hexo文章顶部配置" class="headerlink" title="hexo文章顶部配置"></a>hexo文章顶部配置</h3><ul><li>title ：文章的标题</li><li>date ：文章的创建时间（hexo 会自动帮你写）</li><li>categories ：文章的分类，宏观上的，并且只能有一个</li><li>tags ：标签，给文章添加一个或多个标签</li></ul><blockquote><p>添加多个标签时，请使用下方的格式</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 原生js </tag>
+            
+            <tag> 正则表达式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

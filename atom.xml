@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>我的大前端</title>
+  
+  <subtitle>渴望知识的海洋</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-09-14T05:45:06.803Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>更远的远方</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java</title>
+    <link href="http://yoursite.com/2019/09/14/java/"/>
+    <id>http://yoursite.com/2019/09/14/java/</id>
+    <published>2019-09-14T05:37:45.000Z</published>
+    <updated>2019-09-14T05:45:06.803Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h2 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h2&gt;&lt;h2 id=&quot;常量&quot;&gt;&lt;a href=&quot;#常量&quot; class=&quot;headerlink&quot; title=&quot;常量&quot;&gt;&lt;/a&gt;常量&lt;/h2&gt;&lt;h2 id
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ajax</title>
+    <link href="http://yoursite.com/2019/09/14/Ajax/"/>
+    <id>http://yoursite.com/2019/09/14/Ajax/</id>
+    <published>2019-09-14T05:33:05.000Z</published>
+    <updated>2019-09-14T05:35:41.864Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javascript</title>
+    <link href="http://yoursite.com/2019/09/14/javascript/"/>
+    <id>http://yoursite.com/2019/09/14/javascript/</id>
+    <published>2019-09-14T05:02:03.000Z</published>
+    <updated>2019-09-14T05:30:20.316Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3><h3 id="事件函数"><a href="#事件函数" class="headerlink" title="事件函数"></a>事件函数</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;获取元素&quot;&gt;&lt;a href=&quot;#获取元素&quot; class=&quot;headerlink&quot; title=&quot;获取元素&quot;&gt;&lt;/a&gt;获取元素&lt;/h3&gt;&lt;h3 id=&quot;事件函数&quot;&gt;&lt;a href=&quot;#事件函数&quot; class=&quot;headerlink&quot; title=&quot;事件函数&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="原生js" scheme="http://yoursite.com/tags/%E5%8E%9F%E7%94%9Fjs/"/>
+    
+      <category term="事件函数" scheme="http://yoursite.com/tags/%E4%BA%8B%E4%BB%B6%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则</title>
+    <link href="http://yoursite.com/2019/09/14/%E6%AD%A3%E5%88%99/"/>
+    <id>http://yoursite.com/2019/09/14/正则/</id>
+    <published>2019-09-14T04:26:45.000Z</published>
+    <updated>2019-09-14T05:29:53.424Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="hexo文章顶部配置"><a href="#hexo文章顶部配置" class="headerlink" title="hexo文章顶部配置"></a>hexo文章顶部配置</h3><ul><li>title ：文章的标题</li><li>date ：文章的创建时间（hexo 会自动帮你写）</li><li>categories ：文章的分类，宏观上的，并且只能有一个</li><li>tags ：标签，给文章添加一个或多个标签</li></ul><blockquote><p>添加多个标签时，请使用下方的格式</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags: </span><br><span class="line">    - 标签1</span><br><span class="line">    - 标签2</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;hexo文章顶部配置&quot;&gt;&lt;a href=&quot;#hexo文章顶部配置&quot; class=&quot;headerlink&quot; title=&quot;hexo文章顶部配置&quot;&gt;&lt;/a&gt;hexo文章顶部配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;title ：文章的标题&lt;/li&gt;
+&lt;li&gt;date ：文章的创
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="原生js" scheme="http://yoursite.com/tags/%E5%8E%9F%E7%94%9Fjs/"/>
+    
+      <category term="正则表达式" scheme="http://yoursite.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+</feed>
