@@ -8,27 +8,31 @@
   <meta name="renderer" content="webkit">
 
   
-  <title>我的大前端</title>
+  <title>正则表达式 | 我的大前端</title>
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="我的大前端">
-  <meta name="keywords" content="javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的大前端">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="正则表达式什么是正则：事先写好一个规则， 然后用这个规则对字符串进行过滤 正则表达式的写法：  1.构造函数   new RegExp(&amp;quot;规则&amp;quot;)    2.字面量写法  leg reg=new   RegExp(&amp;#39;规则&amp;#39;) let reg=/规则/ 实例 12345678910let str=&apos;百色学院信息工程学院计算机科学与技术专业&apos;let reg=/计算机">
+<meta name="keywords" content="原生js,正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2019/09/14/正则表达式/index.html">
 <meta property="og:site_name" content="我的大前端">
+<meta property="og:description" content="正则表达式什么是正则：事先写好一个规则， 然后用这个规则对字符串进行过滤 正则表达式的写法：  1.构造函数   new RegExp(&amp;quot;规则&amp;quot;)    2.字面量写法  leg reg=new   RegExp(&amp;#39;规则&amp;#39;) let reg=/规则/ 实例 12345678910let str=&apos;百色学院信息工程学院计算机科学与技术专业&apos;let reg=/计算机">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-20T03:39:19.717Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的大前端">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="正则表达式什么是正则：事先写好一个规则， 然后用这个规则对字符串进行过滤 正则表达式的写法：  1.构造函数   new RegExp(&amp;quot;规则&amp;quot;)    2.字面量写法  leg reg=new   RegExp(&amp;#39;规则&amp;#39;) let reg=/规则/ 实例 12345678910let str=&apos;百色学院信息工程学院计算机科学与技术专业&apos;let reg=/计算机">
 
   <meta name="format-detection" content="telephone=no,email=no">
   <meta name="theme-color" content="#9C27B0">
   <meta name="description" content>
-  <meta name="keywords" content>
+  <meta name="keywords" content=",原生js,正则表达式">
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="我的大前端">
-  <meta name="msapplication-starturl" content="http://yoursite.com/">
+  <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/14/正则表达式/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="我的大前端">
@@ -36,9 +40,12 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
+    <meta property="article:published_time" content="Sat Sep 14 2019 12:26:45 GMT+0800">
+    <meta property="article:modified_time" content="Sun Oct 20 2019 11:39:19 GMT+0800">
+  
 
   
-    <link rel="canonical" href="http://yoursite.com">
+    <link rel="canonical" href="http://yoursite.com/2019/09/14/正则表达式/">
   
 
   <meta name="google-site-verification" content="fXjtlIfaDc_X-0P11rO3bEp1Nk4IKXphoJv0GqGZCco">
@@ -176,168 +183,39 @@
   </div>
 </aside>
   <main id="main" class="mdui-m-t-5 fadeIn animated">
-
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/14/正则/">
-      <header class="mdui-card-media mdui-ripple">
-        <div style="position: absolute;right: 0;width: 48px;height: 0;margin: 16px 0;border-top: 16px solid #9c27b0;border-bottom: 16px solid #9c27b0;border-left: 16px solid transparent;box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2);-webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2);"></div>
-        <img src="/images/random/material-13.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">正则</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-14 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        
-      
-      <a href="/2019/09/14/正则/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/前端/">前端</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/原生js/">原生js</a><a class="mdui-ripple article_tags-link" href="/tags/正则表达式/">正则表达式</a>
-      
-    </footer>
+  <style>
+    #tagcloud a{margin:0 8px;padding:8px 0;line-height:40px;white-space:nowrap;text-decoration:none;opacity:.87;-webkit-transition:all .2s cubic-bezier(.4,0,.2,1);-o-transition:all .2s cubic-bezier(.4,0,.2,1);transition:all .2s cubic-bezier(.4,0,.2,1)}
+    #tagcloud a:hover{opacity:1;text-shadow:1px 1px 3px #444}
+  </style>
+  <article id="tagcloud" class="mdui-text-center">
+    <a href="/tags/事件函数/" style="font-size: 16px; color: #3f51b5">事件函数</a> <a href="/tags/原生js/" style="font-size: 35px; color: #ff4081">原生js</a> <a href="/tags/正则表达式/" style="font-size: 25.5px; color: #9f499b">正则表达式</a>
   </article>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/14/正则表达式/">
-      <header class="mdui-card-media mdui-ripple">
-        <div style="position: absolute;right: 0;width: 48px;height: 0;margin: 16px 0;border-top: 16px solid #9c27b0;border-bottom: 16px solid #9c27b0;border-left: 16px solid transparent;box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2);-webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2);"></div>
-        <img src="/images/random/material-18.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">正则表达式</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-14 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        正则表达式
-      
-      <a href="/2019/09/14/正则表达式/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/前端/">前端</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/原生js/">原生js</a><a class="mdui-ripple article_tags-link" href="/tags/正则表达式/">正则表达式</a>
-      
-    </footer>
-  </article>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/27/ES6经典入门/">
-      <header class="mdui-card-media mdui-ripple">
-        
-        <img src="/images/random/material-3.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title"></div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-27 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        ES...
-      
-      <a href="/2019/09/27/ES6经典入门/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2019/09/14/正则/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上一篇
+      </a>
+    
+    <div class="spacer"></div>
+    
+  </nav>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/14/java/">
-      <header class="mdui-card-media mdui-ripple">
-        
-        <img src="/images/random/material-14.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">java</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-14 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        变量
-      
-      <a href="/2019/09/14/java/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/14/Ajax/">
-      <header class="mdui-card-media mdui-ripple">
-        
-        <img src="/images/random/material-4.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Ajax</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-14 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        Ajax
-      
-      <a href="/2019/09/14/Ajax/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-      
-    </footer>
-  </article>
+  <div id="comment" class="mdui-m-t-5">
+    <style>#pop_ad,#feedAv{display:none!important;position:absolute!important;z-index:-9999;left:-1000px;opacity:0!important}</style>
+<div id="SOHUCS" sid="ck1yfze4b00007wvxn2p15sa4"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cyur29jfJ';
+var conf = 'prod_1dca107083163e723a51dc5bbf7e3974';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  </div>
 
-  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
-    <a href="/2019/09/14/javascript/">
-      <header class="mdui-card-media mdui-ripple">
-        
-        <img src="/images/random/material-1.png" style="max-height: 240px;">
-        <div class="mdui-card-media-covered">
-          <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">javascript</div>
-            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-14 / <i class="iconfont">&#xe601;</i> 更远的远方</div>
-          </div>
-        </div>
-      </header>
-    </a>
-    <div class="mdui-card-content mdui-typo">
-      
-        获取元素
-      
-      <a href="/2019/09/14/javascript/">阅读更多 >></a>
-    </div>
-    <footer class="mdui-card-actions">
-      
-        <a class="mdui-ripple article_categories-link" href="/categories/前端/">前端</a>
-      
-      
-        <a class="mdui-ripple article_tags-link" href="/tags/事件函数/">事件函数</a><a class="mdui-ripple article_tags-link" href="/tags/原生js/">原生js</a>
-      
-    </footer>
-  </article>
 
 </main>
   <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">

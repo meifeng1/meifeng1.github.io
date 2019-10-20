@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>我的大前端</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="我的大前端">
+  <meta name="description" content="ES6经典入门声明变量之前版本:   用var定义 现在版本:  const 用来定义常量定义完必须有值不可修改     let相当于var     在以后开发中尽量使用let不适用var   let需要注意:   1.没有预解析,不存在变量提升     在代码块内,只要let定义变量,在之前使用,都会报错            先定义后使用 2.在同一个作用域里面,不可以重复定义变量 3.在fo">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的大前端">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/ES6经典入门/index.html">
+<meta property="og:site_name" content="我的大前端">
+<meta property="og:description" content="ES6经典入门声明变量之前版本:   用var定义 现在版本:  const 用来定义常量定义完必须有值不可修改     let相当于var     在以后开发中尽量使用let不适用var   let需要注意:   1.没有预解析,不存在变量提升     在代码块内,只要let定义变量,在之前使用,都会报错            先定义后使用 2.在同一个作用域里面,不可以重复定义变量 3.在fo">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-28T05:00:25.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的大前端">
+<meta name="twitter:description" content="ES6经典入门声明变量之前版本:   用var定义 现在版本:  const 用来定义常量定义完必须有值不可修改     let相当于var     在以后开发中尽量使用let不适用var   let需要注意:   1.没有预解析,不存在变量提升     在代码块内,只要let定义变量,在之前使用,都会报错            先定义后使用 2.在同一个作用域里面,不可以重复定义变量 3.在fo">
+
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+  <meta name="description" content>
+  <meta name="keywords" content>
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="我的大前端">
+  <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/27/ES6经典入门/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="我的大前端">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <meta property="article:published_time" content="Fri Sep 27 2019 19:34:18 GMT+0800">
+    <meta property="article:modified_time" content="Sat Sep 28 2019 13:00:25 GMT+0800">
+  
+
+  
+    <link rel="canonical" href="http://yoursite.com/2019/09/27/ES6经典入门/">
+  
+
+  <meta name="google-site-verification" content="fXjtlIfaDc_X-0P11rO3bEp1Nk4IKXphoJv0GqGZCco">
+  <meta name="baidu-site-verification" content="I3t1wfwZvd">
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-139531378-1','auto');ga('send','pageview');
+</script>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {var hm = document.createElement('script');
+  hm.src = 'https://hm.baidu.com/hm.js?1054d51c0b66f1d168829173682c8159';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+  
+
+  <link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left mdui-theme-primary-brown mdui-theme-accent-blue">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">我的大前端</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">更远的远方</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>渴望知识的海洋</div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:1518181055@qq.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '1518181055@qq.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">inbox</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="mdui-ripple sidebar_archives-count">6</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">chrome_reader_mode</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/前端/">前端<span class="mdui-ripple sidebar_archives-count">3</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/事件函数/">事件函数<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/原生js/">原生js<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/正则表达式/">正则表达式<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">画廊</a>
+    
+      <a href="/tv" class="mdui-list-item mdui-ripple">电视直播</a>
+    
+    <div class="mdui-collapse-item">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="http://images.niemingzhao.top/my_resume.html" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">我的简历</a>
+        
+          <a href="https://www.baidu.com" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">百度一下</a>
+        
+          <a href="https://github.com/meifeng1/meifeng1.github.io" target="_blank" class="mdui-list-item mdui-ripple mdui-p-l-2 mdui-text-color-theme-accent" style="justify-content: center;">GitHub</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css">
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title"></div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2019-09-27 / <i class="iconfont">&#xe601;</i> 更远的远方 &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACX0lEQVR42u3aQW7DMAwEQP//0+m1QBt3SVqyG4xOAaLYGh0khuTx+uhx4OHh4eHh4eHhPYx3xON8/vdvf37+ZRFvnjlZGx4eHt5O3h9H7ZsXv5uZfHu+xNHa8PDw8DbykuM+weQXSb6J+drw8PDwnsZLSOdPS8JrPDw8vM/jJYurhuN4eHh4/5HXS7lWr4rJZbM814KHh4cX86oFsJ2fb6jv4eHh4Z3yyi1NxS2oLvo1Hnh4eHireUk5KjqOW4CjNS74x4CHh4c34CV/75OCVpKwOG87qG50897Dw8PDG/Oqpf2kHDW/PPLGLDw8PLz9vCp10hbQC9Crq8XDw8NbzcuTBUlAXA5/4zcWGg7w8PDwFvPyI77XZtpLZ1R/i4eHh3cvLy9T5cFu9crpFeHw8PDw9vCSQzwPba9tOKhePHh4eHj7eVVqXqbqtajmLbB4eHh49/J6KYO8iSqZP3kLHh4e3k5etcyfN0710sS9wBoPDw9vDy9POuSHdb41r9bAw8PDewIvOdZXp2LnCRE8PDy8u3j5y6oNr3lzQC8FjIeHh7eaV01DTBoCeumPclsDHh4e3nZe9RDPA9/eyK8xPDw8vD280YNa5bFJAJ2kffHw8PBW864qO+WLzoPvZrIYDw8PbzGvGtquSODmAf2o6QoPDw/vUl71Mpg3EPTY0WWDh4eHt5GXNBD0qNXE8cW5Fjw8PLxbedWZvaRwb1vx8PDwnsyrthr0ZjbXg4eHh7eR1yt65cWwHjgvkuHh4eHt5PUKYL2Ubp5iqOLx8PDw9vA+b+Dh4eHh4eHh4T1gfAHzr+hMi2E0SwAAAABJRU5ErkJggg==">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="http://service.weibo.com/share/share.php?appkey=&title=&url=http://yoursite.com/2019/09/27/ES6经典入门/&pic=http://yoursite.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到微博</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=&url=http://yoursite.com/2019/09/27/ES6经典入门/&via=更远的远方" target="_blank" class="mdui-ripple">分享到Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/09/27/ES6经典入门/" target="_blank" class="mdui-ripple">分享到Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://yoursite.com/2019/09/27/ES6经典入门/" target="_blank" class="mdui-ripple">分享到Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/27/ES6经典入门/&title=" target="_blank" class="mdui-ripple">分享到LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="http://connect.qq.com/widget/shareqq/index.html?site=我的大前端&title=&summary=&pics=http://yoursite.com/images/favicon.png&url=http://yoursite.com/2019/09/27/ES6经典入门/" target="_blank" class="mdui-ripple">分享到QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://yoursite.com/2019/09/27/ES6经典入门/&text=" target="_blank" class="mdui-ripple">分享到Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <h1 id="ES6经典入门"><a href="#ES6经典入门" class="headerlink" title="ES6经典入门"></a>ES6经典入门</h1><h2 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h2><p>之前版本:   用var定义</p>
+<p>现在版本:  const 用来定义常量定义完必须有值不可修改     let相当于var     <strong>在以后开发中尽量使用let不适用var</strong> </p>
+<blockquote>
+<p>let需要注意: </p>
+<p> 1.没有预解析,不存在变量提升     在代码块内,只要let定义变量,在之前使用,都会报错            先定义后使用</p>
+<p>2.在同一个作用域里面,不可以重复定义变量</p>
+<p>3.在for循环,for循环里面是父级作用域,循环内又是一个 </p>
+</blockquote>
+<p>块级作用域:{  块级作用域  }</p>
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值:"></a>解构赋值:</h3><p>适合用于做数据交互Ajax</p>
+<p>例如:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c]=[<span class="number">12</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意:左右两边,结构格式要保持一致</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">json:</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;name,age,job&#125;=&#123;</span><br><span class="line">    name:<span class="string">'Strive'</span>,</span><br><span class="line">    age:<span class="number">18</span>,</span><br><span class="line">    job:<span class="string">'码畜'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>解构时候可以给默认值</p>
+<p>​      let[a,b,c=”默认值”] = [‘aaa’,’bbb’]</p>
+<h3 id="字符串模板及字符串新增"><a href="#字符串模板及字符串新增" class="headerlink" title="字符串模板及字符串新增"></a>字符串模板及字符串新增</h3><p>字符串模板优点:可以随意换行</p>
+<p><code>${变量名字}</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name=<span class="string">'Strive'</span>;</span><br><span class="line"><span class="keyword">let</span> age=<span class="number">18</span>;</span><br><span class="line"><span class="keyword">let</span> str=<span class="string">`这个人叫<span class="subst">$&#123;name&#125;</span>,年龄 <span class="subst">$&#123;age&#125;</span>岁`</span>;</span><br></pre></td></tr></table></figure>
+
+<h6 id="反撇号（-）基础知识"><a href="#反撇号（-）基础知识" class="headerlink" title="反撇号（`）基础知识"></a>反撇号（`）基础知识</h6><p>ES6引入了一种新型的字符串字面量语法，我们称之为模板字符串（template strings）。除了使用反撇号字符 ` 代替普通字符串的引号 ‘ 或 “ 外，它们看起来与普通字符串并无二致。在最简单的情况下，它们与普通字符串的表现一致</p>
+<p>关于字符串的一些东西</p>
+<p>​        <strong>字符串查找:</strong></p>
+<p>​        <strong>str.indexOf(要查找的东西) 返回索引(位置),没找到返回-1</strong></p>
+<p>​        <strong>str.indludes(要找的东西) 返回值   true/false</strong></p>
+<p>​                <strong>判断浏览器:includes</strong></p>
+<p> <strong>字符串是否以谁开头:</strong></p>
+<p>​        <strong>str.startsWith(检测的东西)</strong></p>
+<p><strong>字符串是否以谁结尾:</strong></p>
+<p>​        <strong>str.endsWith(检测的东西)</strong></p>
+<p><strong>重复字符串:</strong></p>
+<p>​        <strong>str.repeat(重复次数)</strong></p>
+<p><strong>填充字符串:</strong></p>
+<p>​        <strong>str.padStart(整个字符串长度,填充东西)往后填充</strong></p>
+<p>​        <strong>str.padStart(整个字符串长度,填充东西) 往后填充</strong></p>
+<h3 id="函数变化"><a href="#函数变化" class="headerlink" title="函数变化"></a>函数变化</h3><ul>
+<li><p>函数默认参数:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">&#123;x=<span class="number">0</span>,y=<span class="number">0</span>&#125;=&#123;&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x,y)</span><br><span class="line">&#125;</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数参数默认已经定义了,不能在使用let,cost声明</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">a=<span class="number">18</span></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> a=<span class="number">101</span><span class="comment">//错误</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+
+<p>扩展运算符,Rest运算符:               …数组</p>
+<h6 id="箭头函数-gt-左边参数-右边传值"><a href="#箭头函数-gt-左边参数-右边传值" class="headerlink" title="箭头函数:  ()=&gt;{}  左边参数,右边传值"></a>箭头函数:  ()=&gt;{}  左边参数,右边传值</h6><p>()=&gt;{</p>
+<p>​    语句;</p>
+<p>} </p>
+<blockquote>
+<p>注意点:</p>
+<pre><code>1. this问题,定义函数所在的对象,不在是运行时所在的对象
+2. 箭头函数里面没有arguments,要用&quot;...&quot;
+3. 箭头函数不能当构造函数</code></pre></blockquote>
+<h2 id="数组循环"><a href="#数组循环" class="headerlink" title="数组循环"></a>数组循环</h2><p>ES里面新增东西:</p>
+<p>​    循环:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span><span class="keyword">for</span>		<span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;arr.length;i++)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> <span class="keyword">while</span> </span><br><span class="line"></span><br><span class="line">    arr.forEach()  <span class="comment">//用于代替普通的for循环</span></span><br><span class="line"><span class="string">`arr.forEach(function(val,index,arr)&#123;console.log(val,index,arr)&#125;)`</span></span><br><span class="line">	<span class="comment">//以下方法都是接收两个参数</span></span><br><span class="line">    arr.map()     <span class="comment">//做数据交互 "映射" 正常情况下,需要配合return  ,返回一个新的数组,,如果没有return  相当于forEach          只要用到map就一定要与return一起使用</span></span><br><span class="line">	arr.filter)   <span class="comment">//  过滤一些不合格的元素 有返回值,返回true时返回</span></span><br><span class="line">    arr.some()   <span class="comment">//  </span></span><br><span class="line">	arr.every()  <span class="comment">//</span></span><br><span class="line">	arr.reduce()  <span class="comment">//</span></span><br><span class="line">	arr.reduceRight()   <span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
+<p>ES2017新增的运算符   幂运算  math.pow(2,3)  2**3</p>
+<p>for…of…循环</p>
+<p>​    <code>for(let val of arr){console.log(val)}</code></p>
+<h3 id="数组新增东西"><a href="#数组新增东西" class="headerlink" title="数组新增东西"></a>数组新增东西</h3><p>将li标签转为数组          let allLi=[…ali]</p>
+<p>Array.from作用:把类数组(获取一组元素,arguments…)对象转成数组 </p>
+<p>let arr2=Array.from(arr,length)</p>
+<p>Array.of()   把一组值转为数组</p>
+<p>arr.find()  查找   第一个符合条件的数组成员 , 如果没有找到,返回undefined</p>
+<p>arr.findIndex   找的是位置   没找到返回   -1</p>
+<p>arr.fill()   填充    arr.fill(填充的东西,开始位置,结束位置)</p>
+<p>arr.indexOf()           arr.includes()          str.includes()</p>
+<h3 id="对象简单语法"><a href="#对象简单语法" class="headerlink" title="对象简单语法"></a>对象简单语法</h3><p>json  对象简单语法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> json=&#123;</span><br><span class="line">    a:<span class="number">1</span>;</span><br><span class="line">    b:<span class="number">2</span>;showA:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> json=&#123;</span><br><span class="line">    a;</span><br><span class="line">    b;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Object.is(啊,b)   用来比较这两个东西是否相等</p>
+<p>另外两个比较是否相等:”==”    “===”</p>
+<p>Object.assign()用来合并对象</p>
+<h3 id="Promise-承诺-许诺"><a href="#Promise-承诺-许诺" class="headerlink" title="Promise    承诺,许诺"></a>Promise    承诺,许诺</h3><p>解决异步回调函数,事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ajax(url,&#123;<span class="comment">//获取token</span></span><br><span class="line">    ajax(url,()=&gt;&#123;</span><br><span class="line">          ajax(url,()=&gt;&#123;</span><br><span class="line">            <span class="comment">//获取用户相关信息</span></span><br><span class="line">        &#125;)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>语法: </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//resolve   成功调用</span></span><br><span class="line">    <span class="comment">//reject    失败调用</span></span><br><span class="line">&#125;);</span><br><span class="line">promise.then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;&#125;,err=&gt;&#123;&#125;)</span><br><span class="line">promise.catch(<span class="function"><span class="params">err</span>=&gt;</span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(s=<span class="number">10</span>)   resolve(<span class="string">'成功'</span>)</span><br><span class="line">   <span class="keyword">else</span>       reject(<span class="string">'失败'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>Promise.all([p1,p2,p3]):把promise打包,仍到一个数组里面,打包完还是一个promise对象,必须确保,所有的promise对象,都是resolve状态,都是成功</p>
+<p><strong>promise.race([p1,p2,p3])  只要有一个成功就返回</strong></p>
+<p>用户登陆-&gt;用户信息</p>
+<h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><p>​    js<strong>不支持模块化</strong></p>
+<p>​        ruby  require</p>
+<p>​        python import</p>
+<p>在ES6之前,社会制定了一套模块规范</p>
+<ul>
+<li><p>import{xx} ddd</p>
+</li>
+<li><p>Math.pow()</p>
+</li>
+<li><p>Math.abs()</p>
+<p><strong>模块化:</strong></p>
+<ul>
+<li>如何定义模块化</li>
+<li>如何使用?</li>
+</ul>
+<p><strong>使用模块</strong></p>
+<ul>
+<li><script type="module"><script>
+
+</li>
+</ul>
+<p><strong>import特点:</strong></p>
+<ul>
+<li><p>import可以是相对路径,也可以是绝对路径   import:’绝对引入路径’</p>
+</li>
+<li><p>无论引入多少次,import只会导入一次</p>
+</li>
+<li><p>import’./modules/1.js’;如果这么用,就相当于引入文件</p>
+</li>
+<li><p>有提升效果,import会自动提升到顶部,首先执行</p>
+</li>
+<li><p>导出去模块内容,如果里面有定时器更改,外面也会改变,不想Common规范缓存</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>**import()  类似node里面的require,可以动态引入,默认import语法不能写道if之类里面**
+
+​        **import(&apos;./modules/1.js&apos;).then(res=&gt;{console.log(a)})**
+
+优点:
+
+- 按需加载
+- 可以写if中
+- 路径也可以动态
+
+ES6中默认就是严格模式:    &apos;use strict&apos;</code></pre></script></li></ul></li></ul>
+      <blockquote class="mdui-m-t-5">
+        
+          <strong>本文遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a> 许可协议</strong><br>
+        
+        <strong>本文链接：</strong><a href="http://yoursite.com/2019/09/27/ES6经典入门/">http://yoursite.com/2019/09/27/ES6经典入门/</a>
+      </blockquote>
+      
+        <div class="mdui-text-center">
+          <button class="mdui-fab mdui-color-deep-orange mdui-text-color-white mdui-ripple" mdui-dialog="{target: '#donate'}" mdui-tooltip="{content: '打赏', position: 'top'}"><i class="mdui-icon material-icons">thumb_up</i></button>
+        </div>
+      
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+    </footer>
+    
+      <div class="mdui-dialog" id="donate">
+        <div class="mdui-tab mdui-tab-centered" mdui-tab>
+          
+            <a href="#donate-0" class="mdui-ripple">支付宝</a>
+          
+            <a href="#donate-1" class="mdui-ripple">微信支付</a>
+          
+        </div>
+        
+        
+          <div id="donate-0" class="mdui-p-a-2 mdui-typo mdui-text-center">
+            
+              <img src="/images/alipay.jpg" style="width: 300px;">
+            
+          </div>
+        
+          <div id="donate-1" class="mdui-p-a-2 mdui-typo mdui-text-center">
+            
+              <img src="/images/wechat.jpg" style="width: 300px;">
+            
+          </div>
+        
+      </div>
+    
+  </article>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2019/09/14/java/">
+        下一篇&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <style>#pop_ad,#feedAv{display:none!important;position:absolute!important;z-index:-9999;left:-1000px;opacity:0!important}</style>
+<div id="SOHUCS" sid="ck1yfv4he0000r8vx8zhqjzmr"></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cyur29jfJ';
+var conf = 'prod_1dca107083163e723a51dc5bbf7e3974';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  </div>
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+      <a href="https://weibo.com/2360828682/profile" target="_blank"><i class="mdui-p-a-1 mdui-icon iconfont mdui-text-color-theme-a100">&#xec7e;</i></a>
+    
+    
+    
+    
+      <a href="https://github.com/meifeng1/meifeng1.github.io" target="_blank"><i class="mdui-p-a-1 mdui-icon iconfont mdui-text-color-theme-a100">&#xe7ab;</i></a>
+    
+    
+    
+      <a href="https://www.zhihu.com/people/nie-1-58" target="_blank"><i class="mdui-p-a-1 mdui-icon iconfont mdui-text-color-theme-a100">&#xe6c0;</i></a>
+    
+    
+    
+      <a href="tencent://message/?uin=1432440963&Menu=yes" target="_blank"><i class="mdui-p-a-1 mdui-icon iconfont mdui-text-color-theme-a100">&#xe651;</i></a>
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy;
+    <!-- 2016 -->
+    
+      2019 - 
+    
+    <!-- 今年的年份 -->
+    2019
+    更远的远方<br>
+    <!-- Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a> -->
+    
+     鲁ICP备19009266号-1
+
+    <!-- 下面的是不算子人数统计 -->
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
